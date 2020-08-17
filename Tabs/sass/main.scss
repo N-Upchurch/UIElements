@@ -1,0 +1,48 @@
+// Variables
+$border-color: rgba(100,150,200,1);
+
+// Main
+body {
+    background-color: white;
+    margin: 2rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    border: .1rem solid $border-color;
+    margin-top: -.1rem;
+    min-height: 20rem;
+}
+
+nav {
+    a {
+        img {
+            width:100px;
+            object-fit: cover;
+        }
+    }
+    div.row {
+        align-self: flex-end;
+        margin-right: 1.25rem;
+    }
+    .tab button {
+        background: white;
+        border: .1rem solid $border-color;
+        border-radius: .5rem;
+        min-height: 2rem;
+        margin-right: .3rem;
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+// Flex Containers
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
