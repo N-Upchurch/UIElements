@@ -1,48 +1,83 @@
 // Variables
-$border-color: rgba(100,150,200,1);
+$border-color: rgb(153, 195, 238);
+$border: .1rem solid $border-color;
 
-// Main
+$primary-bg-color: rgb(49, 49, 49);
+
+$tab-bg-color: rgba(255,255,255,1);
+$tab-color-active: rgb(78, 235, 208);
+$tab-color-inactive: rgba(200,200,200,1);
+
+
+// Global
+html, body {
+    background: $primary-bg-color;
+}
+
 body {
-    background-color: white;
+    background: white;
     margin: 2rem;
 }
 
-button {
-    cursor: pointer;
+nav {
+    background: $primary-bg-color;
 }
 
+// Composition
 main {
-    border: .1rem solid $border-color;
+    //border: $border;
     margin-top: -.1rem;
     min-height: 20rem;
 }
 
-nav {
-    a {
-        img {
-            width:100px;
-            object-fit: cover;
-        }
-    }
-    div.row {
-        align-self: flex-end;
-        margin-right: 1.25rem;
-    }
-    .tab button {
-        background: white;
-        border: .1rem solid $border-color;
-        border-radius: .5rem;
-        min-height: 2rem;
-        margin-right: .3rem;
-        border-bottom: none;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
+
+// Utility Classes
+.fe {
+    align-self: flex-end;
 }
 
-// Flex Containers
+.fs {
+    align-self: flex-start;
+}
+
 .row {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+}
+
+
+// Blocks
+button {
+    cursor: pointer;
+}
+
+.logo {
+    width:3rem;
+    object-fit: cover;
+}
+
+.tab {
+    background: $tab-bg-color;
+    border: none;
+    border-top: .2rem solid $tab-color-inactive;
+    border-radius: 0rem;
+    box-shadow: inset 0rem -1rem 1rem -1.2rem rgba(0,0,0,0.2);
+    margin-right: .25rem;
+    min-height: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+
+.tabRow {
+    margin-right: 1rem;
+    background: $primary-bg-color;
+}
+
+
+// Exceptions
+.tab[data-state="active"] {
+    box-shadow: none;
+    border-top-color: $tab-color-active;
 }

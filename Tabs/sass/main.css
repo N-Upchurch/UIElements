@@ -1,50 +1,62 @@
+html, body {
+  background: #313131;
+}
+
 body {
-  background-color: white;
+  background: white;
   margin: 2rem;
+}
+
+nav {
+  background: #313131;
+}
+
+main {
+  margin-top: -.1rem;
+  min-height: 20rem;
+}
+
+.fe {
+  align-self: flex-end;
+}
+
+.fs {
+  align-self: flex-start;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 button {
   cursor: pointer;
 }
 
-main {
-  border: 0.1rem solid #6496c8;
-  margin-top: -.1rem;
-  min-height: 20rem;
+.logo {
+  width: 3rem;
+  object-fit: cover;
 }
 
-nav a img {
-  width: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-nav div.row {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-right: 1.25rem;
-}
-
-nav .tab button {
+.tab {
   background: white;
-  border: 0.1rem solid #6496c8;
-  border-radius: .5rem;
+  border: none;
+  border-top: 0.2rem solid #c8c8c8;
+  border-radius: 0rem;
+  box-shadow: inset 0rem -1rem 1rem -1.2rem rgba(0, 0, 0, 0.2);
+  margin-right: .25rem;
   min-height: 2rem;
-  margin-right: .3rem;
-  border-bottom: none;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.tabRow {
+  margin-right: 1rem;
+  background: #313131;
+}
+
+.tab[data-state="active"] {
+  box-shadow: none;
+  border-top-color: #4eebd0;
 }
